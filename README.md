@@ -8,7 +8,7 @@
 
 
 <p align="center">
-  <b>Construindo o <a href="https://mcp.centralldark.com">CentralDark</a></b> — automação WhatsApp, bots Telegram, CRM e infra própria rodando em VPS.
+  <b>Construindo o CentralDark</b> — automação WhatsApp, bots Telegram, CRM e infra própria rodando em VPS.
 </p>
 
 <p align="center">
