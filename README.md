@@ -3,7 +3,7 @@
 <h1 align="center">Opa, eu sou o SegredoiDev 👋</h1>
 
 <p align="center">
-  <img src="https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif" alt="MASCOTE" />
+  <img src="https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif" alt="MASCOTE" width="50" />
 </p>
 
 
