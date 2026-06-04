@@ -33,6 +33,12 @@
   <img src="https://raw.githubusercontent.com/segredounlock/segredounlock/main/github-metrics.svg" alt="Metrics" />
 </p>
 
+### 🏆 Conquistas (calculadas via GraphQL — sem depender de plugin)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/segredounlock/segredounlock/main/github-conquistas.svg" alt="Conquistas do perfil" />
+</p>
+
 ### 📊 Estatísticas
 
 <p align="center">
