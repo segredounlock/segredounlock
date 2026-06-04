@@ -1,47 +1,61 @@
-<h1 align="center">Olá, eu sou o Segredo 👋</h1>
+<!-- Vitrine do perfil — SegredoDev / CentralDark -->
+
+<h1 align="center">Opa, eu sou o SegredoDev 👋</h1>
 
 <p align="center">
-  <em>Construindo o <strong>CentralDark</strong> — plataforma própria de automação WhatsApp, CRM, bots Telegram e infra em VPS.</em>
+  <b>Construindo o <a href="https://mcp.centralldark.com">CentralDark</a></b> — automação WhatsApp, bots Telegram, CRM e infra própria rodando em VPS.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Caddy-1F88C0?style=for-the-badge&logo=caddy&logoColor=white" />
-  <img src="https://img.shields.io/badge/PM2-2B037A?style=for-the-badge&logo=pm2&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
+  <img src="https://komarev.com/ghpvc/?username=segredounlock&label=Visitas&color=0e75b6&style=flat" alt="visitas" />
+  <img src="https://img.shields.io/github/followers/segredounlock?label=Followers&style=flat&color=blue" alt="followers" />
+  <img src="https://img.shields.io/badge/Foco-Automa%C3%A7%C3%A3o%20%2B%20IA-7c3aed?style=flat" alt="foco" />
 </p>
 
 ---
 
-### 🚀 Projeto principal
+### 🚀 O que tô fazendo agora
 
-**[CentralDark / clone-deck](https://github.com/segredounlock/clone-deck)** — painel + automações + integrações WhatsApp/Telegram, tudo rodando em VPS própria com deploy contínuo direto do GitHub.
+- 🧠 **CentralDark** — plataforma própria de automação WhatsApp + CRM + bots
+- 🤖 **MCP Server** próprio rodando em `mcp.centralldark.com` (integra IA com a minha VPS direto)
+- 📲 **Clone Deck** — painel multi-instância WhatsApp com sincronização realtime
+- 🛠️ Tudo auto-hospedado: VPS, Caddy, PM2, Supabase self-host, GitHub Actions
 
-### 🛠️ No que tô trabalhando agora
+### 🧰 Stack principal
 
-- 🤖 **MCP Server** (`mcp.centralldark.com`) — servidor próprio que dá superpoderes ao ChatGPT/Claude pra mexer no projeto, com OAuth do GitHub e ~21 ferramentas (VPS, GitHub, build, logs).
-- 📱 **Automação WhatsApp** — múltiplas sessões via WuzAPI, fila própria, gateway dedicado.
-- 🔔 **Bot Telegram** — notificações operacionais e controle remoto da infra.
-- 🧱 **Infra-as-Code** — instalador único (`install.sh` + docs) que sobe a stack inteira numa VPS nova.
+<p>
+  <img src="https://skillicons.dev/icons?i=ts,react,vite,tailwind,nodejs,bun,supabase,postgres,docker,nginx,linux,bash,github,githubactions,vscode" />
+</p>
 
 ### 📊 Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=segredounlock&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=segredounlock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="170" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=segredounlock&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=segredounlock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=segredounlock&theme=tokyonight&hide_border=true" height="170" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=segredounlock&theme=tokyonight&hide_border=true" />
 </p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=segredounlock&theme=tokyonight&no-frame=true&row=1&column=7" />
+</p>
+
+### 📈 Atividade
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=segredounlock&theme=tokyo-night&hide_border=true&area=true" />
+</p>
+
+### 🌐 Projetos em destaque
+
+| Projeto | O que é |
+|---|---|
+| 🟣 [**clone-deck**](https://github.com/segredounlock/clone-deck) | Painel CentralDark — multi-instância WhatsApp, CRM, automação |
+| 🤖 [**BotPuxadas**](https://github.com/segredounlock/BotPuxadas) | Bot Telegram de alertas e integrações |
+| 🔌 [**proxy-efi**](https://github.com/segredounlock/proxy-efi) | Proxy/gateway de integrações |
 
 ---
 
-<p align="center"><sub>Construído com café, madrugada e muito <code>git push origin main</code> ☕🌙</sub></p>
+<sub>⚡ Vitrine inspirada em <a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme">awesome-github-profile-readme</a> · stats por <a href="https://github.com/anuraghazra/github-readme-stats">github-readme-stats</a></sub>
