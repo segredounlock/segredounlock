@@ -1,7 +1,13 @@
 <!-- Vitrine do perfil — SegredoDev / CentralDark -->
 
 <h1 align="center">Opa, eu sou o SegredoDev 👋</h1>
-
+### 🌐 Projetos em destaque
+<h1 align="center">
+| Projeto | O que é |
+|---|---|
+| 🟣 [**clone-deck**](https://github.com/segredounlock/clone-deck) | Painel CentralDark — multi-instância WhatsApp, CRM, automação |
+| 🤖 [**BotPuxadas**](https://github.com/segredounlock/BotPuxadas) | Bot Telegram de alertas e integrações |
+| 🔌 [**proxy-efi**](https://github.com/segredounlock/proxy-efi) | Proxy/gateway de integrações |</h1>
 <p align="center">
   <b>Construindo o <a href="https://mcp.centralldark.com">CentralDark</a></b> — automação WhatsApp, bots Telegram, CRM e infra própria rodando em VPS.
 </p>
@@ -60,11 +66,5 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=segredounlock&theme=tokyo-night&hide_border=true&area=true&custom_title=Gr%C3%A1fico%20de%20atividade%20no%20GitHub" />
 </p>
 
-### 🌐 Projetos em destaque
 
-| Projeto | O que é |
-|---|---|
-| 🟣 [**clone-deck**](https://github.com/segredounlock/clone-deck) | Painel CentralDark — multi-instância WhatsApp, CRM, automação |
-| 🤖 [**BotPuxadas**](https://github.com/segredounlock/BotPuxadas) | Bot Telegram de alertas e integrações |
-| 🔌 [**proxy-efi**](https://github.com/segredounlock/proxy-efi) | Proxy/gateway de integrações |
 
