@@ -46,8 +46,6 @@ jobs:
           plugin_topics: yes
           plugin_topics_mode: icons
           plugin_followup: yes
-          # plugin_habits desligado: bug upstream "Cannot destructure property 'author' of undefined"
-          # plugin_achievements_secrets desligado: GitHub desativou Projects classic, quebra a query
           plugin_achievements: no
           plugin_achievements_threshold: C
           plugin_achievements_secrets: no
@@ -59,8 +57,51 @@ jobs:
           sudo cp /metrics_renders/github-metrics.svg ./github-metrics.svg
           sudo chown $USER ./github-metrics.svg
           python3 <<'PY'
+          import re
           p="./github-metrics.svg"
           s=open(p,encoding="utf-8").read()
+
+          # Substituições com regex (para frases com números/nomes)
+          regex_subs = [
+            (r"Joined GitHub (\S+) years ago", r"Entrou no GitHub há \1 anos"),
+            (r"Joined GitHub (\S+) year ago", r"Entrou no GitHub há \1 ano"),
+            (r"Joined GitHub (\S+) months ago", r"Entrou no GitHub há \1 meses"),
+            (r"Followed by (\S+) users", r"Seguido por \1 usuários"),
+            (r"Followed by (\S+) user", r"Seguido por \1 usuário"),
+            (r"Following (\S+) users", r"Seguindo \1 usuários"),
+            (r"Following (\S+) user", r"Seguindo \1 usuário"),
+            (r"(\d[\d,\.]*) Commits", r"\1 Commits"),
+            (r"(\d[\d,\.]*) Pull requests opened", r"\1 Pull requests abertos"),
+            (r"(\d[\d,\.]*) Pull requests reviewed", r"\1 Pull requests revisados"),
+            (r"(\d[\d,\.]*) Issues opened", r"\1 Issues abertas"),
+            (r"(\d[\d,\.]*) issue comments", r"\1 comentários em issues"),
+            (r"Member of (\S+) organizations", r"Membro de \1 organizações"),
+            (r"Member of (\S+) organization", r"Membro de \1 organização"),
+            (r"Sponsoring (\S+) repositories", r"Patrocinando \1 repositórios"),
+            (r"Sponsoring (\S+) repository", r"Patrocinando \1 repositório"),
+            (r"Starred (\S+) repositories", r"Favoritou \1 repositórios"),
+            (r"Starred (\S+) repository", r"Favoritou \1 repositório"),
+            (r"Watching (\S+) repositories", r"Observando \1 repositórios"),
+            (r"Watching (\S+) repository", r"Observando \1 repositório"),
+            (r"Contributed to (\S+) repositories", r"Contribuiu em \1 repositórios"),
+            (r"Contributed to (\S+) repository", r"Contribuiu em \1 repositório"),
+            (r"(\S+) Repositories", r"\1 Repositórios"),
+            (r"(\S+) Sponsors", r"\1 Patrocinadores"),
+            (r"(\S+) Stargazers", r"\1 Curtidas"),
+            (r"(\S+) Forkers", r"\1 Forks"),
+            (r"(\S+) Watchers", r"\1 Observadores"),
+            (r"(\S+) Watcher\b", r"\1 Observador"),
+            (r"(\S+) Releases", r"\1 Releases"),
+            (r"(\S+) Packages", r"\1 Pacotes"),
+            (r"(\S+) used\b", r"\1 usados"),
+            (r"On (\S+)'s repositories", r"Nos repositórios de \1"),
+            (r"estimation from (.+) edited files across (.+) commits",
+             r"estimativa de \1 em arquivos editados ao longo de \2 commits"),
+            (r"(\d+) Languages", r"\1 Linguagens"),
+          ]
+          for pat, rep in regex_subs:
+            s = re.sub(pat, rep, s)
+
           tr = {
             "Achievements": "Conquistas",
             "Recent coding habits": "Hábitos de programação recentes",
@@ -77,14 +118,17 @@ jobs:
             "Unexpected error": "Erro inesperado",
             "Most used languages": "Linguagens mais usadas",
             "Programming languages": "Linguagens de programação",
-            "Repositories": "Repositórios",
-            "Followers": "Seguidores",
-            "Following": "Seguindo",
-            "Stars": "Estrelas",
-            "Forks": "Forks",
-            "Issues": "Issues",
+            "Activity": "Atividade",
+            "Community stats": "Comunidade",
+            "Overall issues and pull requests status": "Situação geral de issues e pull requests",
             "Pull requests": "Pull requests",
-            "Commits": "Commits",
+            "Issues": "Issues",
+            "open": "abertos",
+            "closed": "fechados",
+            "drafts": "rascunhos",
+            "skipped": "ignorados",
+            "merged": "mesclados",
+            "No license preference": "Sem licença preferida",
             "Reviews": "Reviews",
             "Discussions started": "Discussões iniciadas",
             "Discussions answered": "Discussões respondidas",
