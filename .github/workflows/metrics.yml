@@ -53,9 +53,10 @@ jobs:
 
       - name: Traduzir labels pra PT-BR
         run: |
+          sudo cp /metrics_renders/github-metrics.svg ./github-metrics.svg
+          sudo chown $USER ./github-metrics.svg
           python3 <<'PY'
-          import re
-          p="/metrics_renders/github-metrics.svg"
+          p="./github-metrics.svg"
           s=open(p,encoding="utf-8").read()
           # Mapa de tradução — só substitui texto exato dentro de <text>...</text> e <title>
           tr = {
@@ -113,7 +114,6 @@ jobs:
 
       - name: Commitar SVG traduzido
         run: |
-          cp /metrics_renders/github-metrics.svg ./github-metrics.svg
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add github-metrics.svg
