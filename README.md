@@ -1,6 +1,6 @@
-<!-- Vitrine do perfil — SegredoDev / CentralDark -->
+<!-- Vitrine do perfil — SegredoiDev / CentralDark -->
 
-<h1 align="center">Opa, eu sou o SegredoDev 👋</h1>
+<h1 align="center">Opa, eu sou o SegredoiDev 👋</h1>
 
 <p align="center">
   <b>Construindo o <a href="https://mcp.centralldark.com">CentralDark</a></b> — automação WhatsApp, bots Telegram, CRM e infra própria rodando em VPS.
@@ -89,5 +89,5 @@
 ---
 
 <p align="center">
-  <sub>Feito com ☕, PM2 e muito Caddy reload — <b>SegredoDev</b> · CentralDark</sub>
+  <sub>Feito com ☕, PM2 e muito Caddy reload — <b>SegredoiDev</b> · CentralDark</sub>
 </p>
