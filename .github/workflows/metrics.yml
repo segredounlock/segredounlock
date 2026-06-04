@@ -46,7 +46,7 @@ jobs:
           plugin_followup: yes
           # plugin_habits desligado: bug upstream "Cannot destructure property 'author' of undefined"
           # plugin_achievements_secrets desligado: GitHub desativou Projects classic, quebra a query
-          plugin_achievements: yes
+          plugin_achievements: no
           plugin_achievements_threshold: C
           plugin_achievements_secrets: no
           plugin_achievements_display: detailed
