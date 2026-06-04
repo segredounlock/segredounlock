@@ -36,16 +36,16 @@
 ### 📊 Estatísticas
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=segredounlock&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&locale=pt-br" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=segredounlock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&locale=pt-br&custom_title=Linguagens%20mais%20usadas" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=segredounlock&theme=tokyonight" alt="Resumo geral do GitHub" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=segredounlock&theme=tokyonight" alt="Repositórios por linguagem" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=segredounlock&theme=tokyonight&hide_border=true&locale=pt_BR" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=segredounlock&theme=tokyonight" alt="Linguagem com mais commits" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=segredounlock&theme=tokyonight&no-frame=true&row=1&column=7" />
+  <img src="https://streak-stats.demolab.com/?user=segredounlock&theme=tokyonight&hide_border=true&locale=pt_BR" alt="Sequência de contribuições" />
 </p>
 
 ### 📈 Atividade
