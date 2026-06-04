@@ -27,6 +27,12 @@
   <img src="https://skillicons.dev/icons?i=ts,react,vite,tailwind,nodejs,bun,supabase,postgres,docker,nginx,linux,bash,github,githubactions,vscode" />
 </p>
 
+### 📸 Painel completo (atualiza a cada 6h)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/segredounlock/segredounlock/main/github-metrics.svg" alt="Metrics" />
+</p>
+
 ### 📊 Estatísticas
 
 <p align="center">
