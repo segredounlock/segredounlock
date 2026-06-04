@@ -15,7 +15,7 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - name: Vitrine principal
+      - name: Gerar vitrine
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
@@ -26,9 +26,8 @@ jobs:
           config_display: large
           config_padding: 0, 8 + 11%
           config_octicon: yes
-          # Traduz labels pra PT-BR (parcial — o que metrics suporta)
-          config_output: svg
-          # Localização: metrics suporta locale pt
+          output_action: none
+          filename: github-metrics.svg
           plugin_languages: yes
           plugin_languages_ignored: html, css
           plugin_languages_details: bytes-size, percentage
@@ -41,18 +40,88 @@ jobs:
           plugin_topics: yes
           plugin_topics_mode: icons
           plugin_followup: yes
-          # Habits: reduz carga pra parar de estourar timeout
           plugin_habits: yes
           plugin_habits_from: 100
           plugin_habits_days: 14
           plugin_habits_facts: yes
           plugin_habits_charts: yes
-          # Achievements
           plugin_achievements: yes
           plugin_achievements_threshold: C
           plugin_achievements_secrets: yes
           plugin_achievements_display: detailed
           plugin_achievements_limit: 0
-          # Locale (suporte parcial do metrics ao pt)
-          extras_css: |
-            .header h2, .header h3 { letter-spacing: 0.2px; }
+
+      - name: Traduzir labels pra PT-BR
+        run: |
+          python3 <<'PY'
+          import re
+          p="/metrics_renders/github-metrics.svg"
+          s=open(p,encoding="utf-8").read()
+          # Mapa de tradução — só substitui texto exato dentro de <text>...</text> e <title>
+          tr = {
+            "Achievements": "Conquistas",
+            "Recent coding habits": "Hábitos de programação recentes",
+            "Starred topics": "Tópicos favoritados",
+            "Contributions calendar": "Calendário de contribuições",
+            "Commits streaks": "Sequências de commits",
+            "Current streak": "Sequência atual",
+            "Best streak": "Melhor sequência",
+            "Commits per day": "Commits por dia",
+            "Highest in a day": "Recorde em um dia",
+            "Average per day": "Média por dia",
+            "These metrics include private contributions": "Estas métricas incluem contribuições privadas",
+            "Last updated": "Última atualização",
+            "Unexpected error": "Erro inesperado",
+            "days": "dias",
+            "Most used languages": "Linguagens mais usadas",
+            "Programming languages": "Linguagens de programação",
+            "Repositories": "Repositórios",
+            "Followers": "Seguidores",
+            "Following": "Seguindo",
+            "Stars": "Estrelas",
+            "Forks": "Forks",
+            "Issues": "Issues",
+            "Pull requests": "Pull requests",
+            "Commits": "Commits",
+            "Reviews": "Reviews",
+            "Discussions started": "Discussões iniciadas",
+            "Discussions answered": "Discussões respondidas",
+            "Projects": "Projetos",
+            "Most active in": "Mais ativo em",
+            "Lines changed": "Linhas alteradas",
+            "added": "adicionadas",
+            "deleted": "removidas",
+            "Total time spent coding": "Tempo total programando",
+            "Last 30 days activity": "Atividade dos últimos 30 dias",
+            "Days with commits": "Dias com commits",
+            "with": "com",
+            "and": "e",
+            "of total time": "do tempo total",
+            "Total contributions": "Total de contribuições",
+            "today": "hoje",
+            "yesterday": "ontem",
+            "ago": "atrás",
+            "a day": "um dia",
+            "days ago": "dias atrás",
+          }
+          # Substitui em todos os lugares (SVG é texto plano)
+          for en, pt in tr.items():
+            s = s.replace(en, pt)
+          open(p,"w",encoding="utf-8").write(s)
+          print("traduzido")
+          PY
+
+      - name: Commitar SVG traduzido
+        run: |
+          cp /metrics_renders/github-metrics.svg ./github-metrics.svg
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add github-metrics.svg
+          if git diff --cached --quiet; then
+            echo "sem mudanças"
+          else
+            git commit -m "vitrine: atualizar github-metrics.svg (PT-BR)
+
+          Co-authored-by: SegredoDev <segredounlock@users.noreply.github.com>"
+            git push
+          fi
