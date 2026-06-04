@@ -91,35 +91,35 @@ def nivel(valor, tiers, nomes=("Bronze","Prata","Ouro","Platina")):
 
 medalhas = [
     {
-        "nome": "Pull Shark",
+        "nome": "Tubarão dos PRs",
         "icone": "🦈",
         "desc": "PRs mergeados",
         "valor": prs_merged,
         "tiers": [2, 16, 128, 1024],
     },
     {
-        "nome": "Starstruck",
+        "nome": "Estrelado",
         "icone": "🌟",
         "desc": "Estrelas no repo mais popular",
         "valor": top_stars,
         "tiers": [16, 128, 512, 4096],
     },
     {
-        "nome": "Pair Extraordinaire",
+        "nome": "Dupla Extraordinária",
         "icone": "👯",
         "desc": "Commits com co-author",
         "valor": co_author_commits,
         "tiers": [1, 10, 24, 48],
     },
     {
-        "nome": "Galaxy Brain",
+        "nome": "Cérebro Galáctico",
         "icone": "🧠",
         "desc": "Respostas aceitas em Discussions",
         "valor": discussions_answered,
         "tiers": [2, 8, 16, 32],
     },
     {
-        "nome": "Quickdraw",
+        "nome": "Saque Rápido",
         "icone": "⚡",
         "desc": "Issue/PR fechado em <5min",
         "valor": 1 if prs_merged > 0 else 0,  # heurística simples
@@ -127,7 +127,7 @@ medalhas = [
         "nomes": ("Conquistada",),
     },
     {
-        "nome": "YOLO",
+        "nome": "YOLO (Sem Revisão)",
         "icone": "🎲",
         "desc": "Merge sem review",
         "valor": 1 if prs_merged > 0 else 0,
@@ -135,7 +135,7 @@ medalhas = [
         "nomes": ("Conquistada",),
     },
     {
-        "nome": "Heart On Your Sleeve",
+        "nome": "Coração na Manga",
         "icone": "❤️",
         "desc": "Reações em comentários",
         "valor": 1,  # política do projeto = sempre reage
@@ -143,7 +143,7 @@ medalhas = [
         "nomes": ("Conquistada",),
     },
     {
-        "nome": "Public Sponsor",
+        "nome": "Patrocinador Público",
         "icone": "💖",
         "desc": "Patrocinando devs open-source",
         "valor": 1 if sponsoring else 0,
