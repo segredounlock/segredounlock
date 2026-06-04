@@ -1,0 +1,41 @@
+name: Atualizar Conquistas
+
+on:
+  schedule:
+    - cron: "30 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/conquistas.yml"
+      - "scripts/gerar_conquistas.py"
+
+permissions:
+  contents: write
+
+jobs:
+  conquistas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Gerar SVG de Conquistas
+        env:
+          GH_USER: segredounlock
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: python3 scripts/gerar_conquistas.py
+
+      - name: Commitar SVG atualizado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add github-conquistas.svg
+          if git diff --cached --quiet; then
+            echo "sem mudanças"
+          else
+            git commit -m "vitrine: atualizar github-conquistas.svg
+
+          Co-authored-by: SegredoDev <segredounlock@users.noreply.github.com>"
+            git push
+          fi
