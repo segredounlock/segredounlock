@@ -62,7 +62,3 @@
 | 🤖 [**BotPuxadas**](https://github.com/segredounlock/BotPuxadas) | Bot Telegram de alertas e integrações |
 | 🔌 [**proxy-efi**](https://github.com/segredounlock/proxy-efi) | Proxy/gateway de integrações |
 
----
-
-<sub>⚡ Vitrine inspirada em <a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme">awesome-github-profile-readme</a> · cards por <a href="https://github.com/anuraghazra/github-readme-stats">github-readme-stats</a></sub>
-
