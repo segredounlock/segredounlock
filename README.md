@@ -8,7 +8,7 @@
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=segredounlock&label=Visitas&color=7c3aed&style=for-the-badge" alt="visitas" />
-  <img src="https://img.shields.io/github/followers/segredounlock?label=Seguidores&style=for-the-badge&color=0e75b6" alt="seguidores" />
+  <img src="https://img.shields.io/badge/dynamic/json?label=Seguidores&query=%24.followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fsegredounlock&style=for-the-badge&color=0e75b6&logo=github" alt="seguidores" />
   <img src="https://img.shields.io/badge/Foco-Automa%C3%A7%C3%A3o%20%2B%20IA-7c3aed?style=for-the-badge" alt="foco" />
 </p>
 
