@@ -118,5 +118,5 @@ jobs:
             git commit -m "vitrine: atualizar github-metrics.svg (PT-BR)
 
           Co-authored-by: SegredoDev <segredounlock@users.noreply.github.com>"
-            git push
+            git pull --rebase && git push
           fi
