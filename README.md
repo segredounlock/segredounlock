@@ -3,6 +3,11 @@
 <h1 align="center">Opa, eu sou o SegredoiDev 👋</h1>
 
 <p align="center">
+  <img src="https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif" alt="MASCOTE" />
+</p>
+
+
+<p align="center">
   <b>Construindo o <a href="https://mcp.centralldark.com">CentralDark</a></b> — automação WhatsApp, bots Telegram, CRM e infra própria rodando em VPS.
 </p>
 
