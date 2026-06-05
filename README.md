@@ -3,11 +3,12 @@
 <h1 align="center">Opa, eu sou o SegredoiDev 👋</h1>
 
 <p align="center">
- <img src="https://i.imgur.com/jNtH6nM.mp4" alt="MASCOTE" width="100" />
-  
-  <img src="https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif" alt="MASCOTE" width="50" />
-</p>
+  <video width="120" autoplay loop muted playsinline style="border-radius: 12px;">
+    <source src="https://i.imgur.com/jNtH6nM.mp4" type="video/mp4">
+  </video>
 
+  <img src="https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif" alt="Loading" width="50" style="margin-left: 15px;" />
+</p>
 
 <p align="center">
   <b>Construindo o CentralDark</b> — automação WhatsApp, bots Telegram, CRM e infra própria rodando em VPS.
