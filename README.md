@@ -3,11 +3,14 @@
 <h1 align="center">Opa, eu sou o SegredoiDev 👋</h1>
 
 <p align="center">
-  <video width="120" autoplay loop muted playsinline style="border-radius: 12px;">
+  <!-- MASCOTE ANIMADO (vídeo) -->
+  <video width="100" autoplay loop muted playsinline>
     <source src="https://i.imgur.com/jNtH6nM.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
   </video>
 
-  <img src="https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif" alt="Loading" width="50" style="margin-left: 15px;" />
+  <!-- GIF do GitHub -->
+  <img src="https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif" alt="MASCOTE" width="50" />
 </p>
 
 <p align="center">
