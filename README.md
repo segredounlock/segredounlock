@@ -3,11 +3,22 @@
 <h1 align="center">Opa, eu sou o SegredoiDev 👋</h1>
 
 <p align="center">
-  <video width="120" autoplay loop muted playsinline style="border-radius: 12px;">
+  <!-- MASCOTE 1 - VÍDEO MP4 -->
+  <video width="110" autoplay loop muted playsinline style="border-radius: 50%; box-shadow: 0 0 20px rgba(0, 255, 100, 0.6); margin: 0 10px;">
     <source src="https://i.imgur.com/jNtH6nM.mp4" type="video/mp4">
   </video>
 
-  <img src="https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif" alt="Loading" width="50" style="margin-left: 15px;" />
+  <!-- MASCOTE 2 - NOVO GIF -->
+  <img src="https://i.imgur.com/pV3hmbA.gif" width="110" style="border-radius: 50%; box-shadow: 0 0 20px rgba(0, 255, 100, 0.6); margin: 0 10px;" alt="Mascote GIF">
+
+  <!-- GIF MONA LOADING -->
+  <img src="https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif" width="55" style="margin: 0 10px;" alt="Loading">
+</p>
+
+<h1 align="center">Opa, eu sou o SegredoiDev 👋</h1>
+
+<p align="center">
+  Construindo o <strong>CentralDark</strong> — automação WhatsApp, bots Telegram, CRM e infra própria rodando em VPS.
 </p>
 
 <p align="center">
