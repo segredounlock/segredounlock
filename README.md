@@ -3,17 +3,10 @@
 <h1 align="center">Opa, eu sou o SegredoiDev 👋</h1>
 
 <p align="center">
-  <!-- VÍDEO MASCOTE ANIMADO -->
-  <video width="120" autoplay loop muted playsinline style="border-radius: 50%; box-shadow: 0 0 25px rgba(0, 255, 100, 0.7); margin: 0 15px;">
-    <source src="https://i.imgur.com/jNtH6nM.mp4" type="video/mp4">
-    Seu navegador não suporta vídeo.
-  </video>
 
   <!-- GIF NOVO -->
   <img src="https://i.imgur.com/pV3hmbA.gif" width="120" style="border-radius: 50%; box-shadow: 0 0 25px rgba(0, 255, 100, 0.7); margin: 0 15px;" alt="Mascote GIF">
 
-  <!-- PIXEL ART (da imagem que você enviou) -->
-  <img src="https://i.imgur.com/INSIRA_O_LINK_DA_IMAGEM_AQUI.png" width="90" style="margin: 0 15px;" alt="Pixel Art">
 </p>
 
 <h1 align="center">Opa, eu sou o SegredoiDev 👋</h1>
