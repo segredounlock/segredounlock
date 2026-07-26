@@ -40,6 +40,17 @@ def import_check():
     from ledger_check import check  # type: ignore
     return check
 
+def resolve_ledger(explicit: Path | None, cwd: Path | None = None) -> Path | None:
+    base = cwd or Path.cwd()
+    candidates = [explicit] if explicit is not None else [
+        base / ".agents/skills/meta-lupa/references/uso-ledger.jsonl",
+        base / "references/uso-ledger.jsonl",
+    ]
+    for candidate in candidates:
+        if candidate is not None and candidate.exists():
+            return candidate
+    return None
+
 def attack_s1(rows: list[dict]) -> dict:
     uid = "MAE-S1-ORPHAN-BEGIN-ATTACK"
     begin = {
@@ -122,32 +133,10 @@ def main() -> int:
     ap.add_argument("--round", type=int, default=1)
     args = ap.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
-    ledger = args.ledger
+    ledger = resolve_ledger(args.ledger)
     if ledger is None:
-        for c in [
-            Path(".agents/skills/meta-lupa/references/uso-ledger.jsonl"),
-            Path("references/uso-ledger.jsonl"),
-            OUT / "sample-ledger.jsonl",
-        ]:
-            if c.exists():
-                ledger = c
-                break
-    if ledger is None or not Path(ledger).exists():
-        sample = OUT / "sample-ledger.jsonl"
-        b = {"schema_version": 1, "event": "BEGIN", "usage_id": "sample-1"}
-        b["record_hash"] = rehash(b)
-        f = {
-            "schema_version": 1,
-            "event": "FINAL",
-            "usage_id": "sample-1",
-            "verdict": "APROVAR",
-            "xp_gained": 0,
-            "point_fixed_evidential": True,
-        }
-        f["record_hash"] = rehash(f)
-        write_jsonl(sample, [b, f])
-        ledger = sample
-        print(f"MAE_WARN sample ledger {ledger}")
+        print("MAE_TARGET_LEDGER_MISSING", file=sys.stderr)
+        return 2
     rows = load_jsonl(Path(ledger))
     results = [attack_s1(rows), attack_s3(rows), attack_s6(rows)]
     lines = [f"# MAE report round {args.round}", ""]

@@ -26,11 +26,38 @@ def load_ledger(path: Path) -> list[dict]:
 def payload_for_hash(row: dict) -> dict:
     return {k: v for k, v in row.items() if k != "record_hash"}
 
+def payload_for_current_hash(row: dict) -> dict:
+    volatile = {"started_at_utc", "finished_at_utc", "attested_at_utc", "record_hash"}
+    return {k: v for k, v in row.items() if k not in volatile}
+
+def valid_direct_hashes(row: dict) -> set[str]:
+    return {
+        sha256_hex(canonical_bytes(payload_for_hash(row))),
+        sha256_hex(canonical_bytes(payload_for_current_hash(row))),
+    }
+
 def check(rows: list[dict]) -> dict:
     begins: dict[str, int] = {}
     finals: dict[str, int] = {}
     bad_hash = 0
     hash_details = []
+    by_usage_id = {r.get("usage_id"): r for r in rows if r.get("usage_id")}
+    attestations: set[tuple[str, str]] = set()
+    orphan_resolvers: set[tuple[str, str]] = set()
+    for row in rows:
+        if row.get("event") != "ATTESTATION":
+            continue
+        if row.get("record_hash") not in valid_direct_hashes(row):
+            continue
+        target_usage_id = row.get("target_usage_id")
+        target_record_hash = row.get("target_record_hash")
+        target = by_usage_id.get(target_usage_id)
+        if target is None or target.get("record_hash") != target_record_hash:
+            continue
+        key = (target_usage_id, target_record_hash)
+        attestations.add(key)
+        if row.get("resolve_orphan") is True:
+            orphan_resolvers.add(key)
     for idx, row in enumerate(rows):
         ev = row.get("event")
         uid = row.get("usage_id") or row.get("usageId") or f"__anon_{idx}"
@@ -40,8 +67,9 @@ def check(rows: list[dict]) -> dict:
             finals[uid] = finals.get(uid, 0) + 1
         rh = row.get("record_hash")
         if rh:
-            recomputed = sha256_hex(canonical_bytes(payload_for_hash(row)))
-            if recomputed != rh and not (isinstance(rh, str) and recomputed.startswith(str(rh))):
+            directly_valid = rh in valid_direct_hashes(row)
+            attested = (uid, rh) in attestations
+            if not directly_valid and not attested:
                 bad_hash += 1
                 hash_details.append(f"idx={idx} usage_id={uid}")
     orphan_begin = 0
@@ -55,7 +83,12 @@ def check(rows: list[dict]) -> dict:
             orphan_final += max(0, fc - c)
     for uid, c in finals.items():
         if begins.get(uid, 0) == 0:
-            orphan_final += c
+            resolved = any(
+                target_usage_id == uid
+                for target_usage_id, _target_record_hash in orphan_resolvers
+            )
+            if not resolved:
+                orphan_final += c
     known = {r.get("record_hash") for r in rows if r.get("record_hash")}
     dangling_refs = 0
     for r in rows:
@@ -71,7 +104,12 @@ def check(rows: list[dict]) -> dict:
         "bad_hash": bad_hash,
         "dangling_refs": dangling_refs,
         "hash_details": hash_details[:20],
-        "ok": orphan_begin == 0 and orphan_final == 0 and dangling_refs == 0,
+        "ok": (
+            orphan_begin == 0
+            and orphan_final == 0
+            and bad_hash == 0
+            and dangling_refs == 0
+        ),
     }
 
 def main() -> int:

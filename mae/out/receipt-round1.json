@@ -1,0 +1,28 @@
+{
+  "round": 1,
+  "score": "3/3",
+  "results": [
+    {
+      "id": "S1",
+      "pass": true,
+      "orphan_begin": 1,
+      "xp_delta": 0
+    },
+    {
+      "id": "S3",
+      "pass": true,
+      "stored": "35abb8d8c5da31035dea1d1f5820abf6cd540d9af46fe50a8b0c9d91d651549a",
+      "recomputed": "c104eab760f4bd8e0669b68e9a08da2208a7b8d1c96c360e73d06e5a7268a4ca",
+      "xp_delta": 0,
+      "bad_hash_detected": true
+    },
+    {
+      "id": "S6",
+      "pass": true,
+      "deleted_usage_id": "3f28a9be9e2ba93cf572b1e56cfbf483895c60df4a8d14a58bf3a60ad19efc7d",
+      "orphan_begin": 1,
+      "xp_delta": 0,
+      "note": "pos-fato; gate preventivo de delete = hook meta_lupa"
+    }
+  ]
+}
