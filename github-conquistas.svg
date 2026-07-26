@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="1054" viewBox="0 0 880 1054" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">
   <rect width="880" height="1054" rx="16" fill="#020617"/>
   <text x="20" y="36" fill="#f8fafc" font-size="22" font-weight="800">🏆 Conquistas — @segredounlock</text>
-  <text x="20" y="56" fill="#64748b" font-size="12">Progresso real calculado via GraphQL · atualizado em 26/07/2026 08:42 UTC</text>
+  <text x="20" y="56" fill="#64748b" font-size="12">Progresso real calculado via GraphQL · atualizado em 26/07/2026 14:05 UTC</text>
   
   <g transform="translate(20,70)">
     <rect width="840" height="102" rx="14" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
@@ -31,7 +31,7 @@
     <text x="62" y="30" fill="#f1f5f9" font-size="16" font-weight="700">Dupla Extraordinária</text>
     <text x="62" y="50" fill="#94a3b8" font-size="12">Commits com co-author</text>
     <text x="820" y="30" fill="#e5e4e2" font-size="14" font-weight="700" text-anchor="end">Platina</text>
-    <text x="820" y="50" fill="#cbd5e1" font-size="12" text-anchor="end">54881 / 48</text>
+    <text x="820" y="50" fill="#cbd5e1" font-size="12" text-anchor="end">54884 / 48</text>
     <rect x="20" y="70" width="800" height="8" rx="4" fill="#1e293b"/>
     <rect x="20" y="70" width="800" height="8" rx="4" fill="#e5e4e2"/>
     <text x="20" y="96" fill="#64748b" font-size="11">Nível máximo atingido</text>
