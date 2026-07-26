@@ -1,8 +1,8 @@
 # MAE Round 2 — bloqueio preventivo no writer
 
 - WRITER_GUARD_IMPLEMENTED: SIM
-- META_LUPA_WRITER_WIRED: NAO
-- WRITER_SCOPE: mae/runners/deny_delete.py; meta_lupa.py remains external to PR #1
+- META_LUPA_WRITER_WIRED: SIM
+- WRITER_SCOPE: E:\CentralDark\Pivete\worktrees\segredounlock-grok-pr1\.agents\skills\meta-lupa\scripts\meta_lupa.py
 - PREVENTED_BEFORE_MUTATION: SIM
 - LEDGER_SHA256_UNCHANGED: SIM
 - ATTACKS_DETECTED: 5/5
@@ -14,5 +14,5 @@
 - **S7_OVERWRITE_EXISTING** PASS (exit=13, deny=DENY_REWRITE, sha_unchanged=True)
 - **S8_RENAME_REPLACEMENT** PASS (exit=13, deny=DENY_RENAME_REPLACEMENT, sha_unchanged=True)
 
-ROUND_2_COMPLETE: NAO
-ROUND_2_VERDICT: PASS_GUARD_ISOLADO; WRITER_REAL_PENDENTE
+ROUND_2_COMPLETE: SIM
+ROUND_2_VERDICT: PASS_WRITER_CANONICO

@@ -5,10 +5,10 @@
   "xp_delta": 0,
   "ledger_sha256_unchanged": true,
   "guard_pass": true,
-  "round2_complete": false,
-  "meta_lupa_writer_wired": false,
-  "writer_scope": "mae/runners/deny_delete.py; meta_lupa.py remains external to PR #1",
-  "verdict": "PASS_GUARD_ISOLADO; WRITER_REAL_PENDENTE",
+  "round2_complete": true,
+  "meta_lupa_writer_wired": true,
+  "writer_scope": "E:\\CentralDark\\Pivete\\worktrees\\segredounlock-grok-pr1\\.agents\\skills\\meta-lupa\\scripts\\meta_lupa.py",
+  "verdict": "PASS_WRITER_CANONICO",
   "results": [
     {
       "id": "S4_DELETE_DIRECT",
@@ -62,7 +62,7 @@
         "blocked": true,
         "code": "DENY_ATTESTED_DELETE",
         "event": "ATTESTATION",
-        "index": 32
+        "index": null
       },
       "before_sha256": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
       "after_sha256": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",

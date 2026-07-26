@@ -41,6 +41,14 @@ VOLATILE_HASH_FIELDS = frozenset(
     {"started_at_utc", "finished_at_utc", "attested_at_utc", "record_hash"}
 )
 DENIED_EXIT = 13
+CANONICAL_WRITER = (
+    Path(__file__).resolve().parents[2]
+    / ".agents"
+    / "skills"
+    / "meta-lupa"
+    / "scripts"
+    / "meta_lupa.py"
+)
 
 
 def line_fingerprint(raw_line: str) -> str:
@@ -435,12 +443,12 @@ def run_direct_attacks(path: Path) -> dict:
             denied_code = None
             command = [
                 sys.executable,
-                str(Path(__file__).resolve()),
-                "--ledger",
-                str(path.resolve()),
-                "attack",
+                str(CANONICAL_WRITER),
+                "writer-attack",
                 "--operation",
                 operation,
+                "--ledger",
+                str(path.resolve()),
             ]
             if operation == "rename-replacement":
                 command.extend(["--replacement", str(replacement.resolve())])
@@ -491,8 +499,8 @@ def run_direct_attacks(path: Path) -> dict:
     guard_pass = all_pass and initial_sha == final_sha and xp_before == xp_after
     return {
         "writer_guard_implemented": True,
-        "meta_lupa_writer_wired": False,
-        "writer_scope": "mae/runners/deny_delete.py; meta_lupa.py remains external to PR #1",
+        "meta_lupa_writer_wired": True,
+        "writer_scope": str(CANONICAL_WRITER),
         "prevented_before_mutation": all_pass,
         "ledger_sha256_before": initial_sha,
         "ledger_sha256_after": final_sha,
@@ -503,8 +511,8 @@ def run_direct_attacks(path: Path) -> dict:
         "attacks_detected": f"{sum(result['pass'] for result in results)}/{len(results)}",
         "results": results,
         "guard_pass": guard_pass,
-        "round2_complete": False,
-        "verdict": "PASS_GUARD_ISOLADO; WRITER_REAL_PENDENTE",
+        "round2_complete": guard_pass,
+        "verdict": "PASS_WRITER_CANONICO" if guard_pass else "FAIL_WRITER_CANONICO",
     }
 
 
@@ -550,7 +558,12 @@ def write_round_2_artifacts(proof: dict) -> None:
             f"(exit={result['exit_code']}, deny={result['deny_code']}, "
             f"sha_unchanged={result['sha256_unchanged']})"
         )
-    lines.extend(["", "ROUND_2_COMPLETE: NAO", "ROUND_2_VERDICT: " + proof["verdict"], ""])
+    lines.extend([
+        "",
+        f"ROUND_2_COMPLETE: {'SIM' if proof['round2_complete'] else 'NAO'}",
+        "ROUND_2_VERDICT: " + proof["verdict"],
+        "",
+    ])
     report = "\n".join(lines)
     (out / "report-round-2.md").write_text(report, encoding="utf-8")
     (out / "report.md").write_text(report, encoding="utf-8")

@@ -1,0 +1,23 @@
+{
+  "canonical_repo": "https://github.com/ServerVpss/CentralDark",
+  "canonical_branch": "feat/bolt-lovable-bridge-2026-07-26",
+  "canonical_commit": "9e243a4cc47925c1710be9de40fb77155be94241",
+  "canonical_writer": ".agents/skills/meta-lupa/scripts/meta_lupa.py",
+  "meta_lupa_writer_wired": true,
+  "attacks_prevented": "5/5",
+  "prevented_before_mutation": true,
+  "ledger_sha256_before": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+  "ledger_sha256_after": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+  "ledger_sha256_unchanged": true,
+  "xp_before": 790,
+  "xp_after": 790,
+  "xp_delta": 0,
+  "ledger": {
+    "orphan_begin": 0,
+    "orphan_final": 0,
+    "bad_hash": 0,
+    "dangling_refs": 0
+  },
+  "regression_tests": "52/52 canonical; 14/14 MAE",
+  "verdict": "PASS_WRITER_CANONICO"
+}
