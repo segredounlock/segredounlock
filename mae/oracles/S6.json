@@ -1,0 +1,7 @@
+{
+  "id": "S6-delete-attested-final",
+  "expect": {
+    "damage_detected": true,
+    "xp_delta": 0
+  }
+}

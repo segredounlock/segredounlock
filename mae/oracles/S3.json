@@ -1,0 +1,8 @@
+{
+  "id": "S3-hash-flip",
+  "expect": {
+    "bad_hash_detected": true,
+    "attested": false,
+    "xp_delta": 0
+  }
+}
