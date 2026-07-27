@@ -1,0 +1,20 @@
+{
+  "profile": "pivete",
+  "skill_discovered": true,
+  "skill_name": "meta-lupa",
+  "skill_path": "C:\\Users\\danda\\AppData\\Local\\hermes\\profiles\\pivete\\skills\\meta-lupa",
+  "canonical_target": "E:\\CentralDark\\Pivete\\worktrees\\bolt-lovable-bridge-20260726\\.agents\\skills\\meta-lupa",
+  "runtime_executed": false,
+  "skill_loaded_by_runtime": false,
+  "attempts": [
+    "20260726_203951_c1e0be",
+    "20260726_204033_ea92c8",
+    "20260726_204104_494998",
+    "20260726_204140_8da204"
+  ],
+  "error": "HTTP 404: No endpoints found that support tool use",
+  "failure_stage": "before_first_tool_call",
+  "ledger_mutated_by_failed_attempts": false,
+  "evidence_sha256": "b601660e3a0bdc68e1efe96918d9b783db236c96cf17e7cba19eafd9a041f1a4",
+  "verdict": "BLOCKED_HERMES_PROVIDER"
+}

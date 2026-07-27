@@ -1,0 +1,15 @@
+{
+  "round": 2,
+  "canonical_writer_commit": "9e243a4cc47925c1710be9de40fb77155be94241",
+  "meta_lupa_writer_wired": true,
+  "attacks_prevented": "5/5",
+  "prevented_before_mutation": true,
+  "ledger_sha256_unchanged": true,
+  "xp_delta": 0,
+  "ledger_valid": true,
+  "regression_tests": "PASS",
+  "hermes_discovery": true,
+  "hermes_runtime_executed": false,
+  "round_2_complete": false,
+  "verdict": "BLOQUEADO_APENAS_NO_RUNTIME_HERMES: provider 404 antes da primeira tool call"
+}

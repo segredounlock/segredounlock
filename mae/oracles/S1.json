@@ -1,0 +1,9 @@
+{
+  "id": "S1-orphan-begin",
+  "expect": {
+    "orphan_begin_min": 1,
+    "attested": false,
+    "xp_delta": 0,
+    "ok": false
+  }
+}

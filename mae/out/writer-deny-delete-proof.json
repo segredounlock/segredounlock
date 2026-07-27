@@ -1,0 +1,123 @@
+{
+  "writer_guard_implemented": true,
+  "meta_lupa_writer_wired": true,
+  "writer_scope": "E:\\CentralDark\\Pivete\\worktrees\\segredounlock-grok-pr1\\.agents\\skills\\meta-lupa\\scripts\\meta_lupa.py",
+  "prevented_before_mutation": true,
+  "ledger_sha256_before": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+  "ledger_sha256_after": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+  "ledger_sha256_unchanged": true,
+  "xp_before": 790,
+  "xp_after": 790,
+  "xp_delta": 0,
+  "attacks_detected": "5/5",
+  "results": [
+    {
+      "id": "S4_DELETE_DIRECT",
+      "pass": true,
+      "blocked": true,
+      "deny_code": "DENY_DELETE",
+      "exit_code": 13,
+      "child_result": {
+        "blocked": true,
+        "code": "DENY_DELETE",
+        "event": null,
+        "index": null
+      },
+      "before_sha256": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+      "after_sha256": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+      "sha256_unchanged": true,
+      "ledger_ok": true,
+      "orphan_begin": 0,
+      "orphan_final": 0,
+      "bad_hash": 0,
+      "dangling_refs": 0
+    },
+    {
+      "id": "S5_TRUNCATE_DIRECT",
+      "pass": true,
+      "blocked": true,
+      "deny_code": "DENY_DELETE",
+      "exit_code": 13,
+      "child_result": {
+        "blocked": true,
+        "code": "DENY_DELETE",
+        "event": null,
+        "index": null
+      },
+      "before_sha256": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+      "after_sha256": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+      "sha256_unchanged": true,
+      "ledger_ok": true,
+      "orphan_begin": 0,
+      "orphan_final": 0,
+      "bad_hash": 0,
+      "dangling_refs": 0
+    },
+    {
+      "id": "S6_ATTESTED_RECEIPT_DELETE",
+      "pass": true,
+      "blocked": true,
+      "deny_code": "DENY_ATTESTED_DELETE",
+      "exit_code": 13,
+      "child_result": {
+        "blocked": true,
+        "code": "DENY_ATTESTED_DELETE",
+        "event": "ATTESTATION",
+        "index": null
+      },
+      "before_sha256": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+      "after_sha256": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+      "sha256_unchanged": true,
+      "ledger_ok": true,
+      "orphan_begin": 0,
+      "orphan_final": 0,
+      "bad_hash": 0,
+      "dangling_refs": 0
+    },
+    {
+      "id": "S7_OVERWRITE_EXISTING",
+      "pass": true,
+      "blocked": true,
+      "deny_code": "DENY_REWRITE",
+      "exit_code": 13,
+      "child_result": {
+        "blocked": true,
+        "code": "DENY_REWRITE",
+        "event": "BEGIN",
+        "index": 0
+      },
+      "before_sha256": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+      "after_sha256": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+      "sha256_unchanged": true,
+      "ledger_ok": true,
+      "orphan_begin": 0,
+      "orphan_final": 0,
+      "bad_hash": 0,
+      "dangling_refs": 0
+    },
+    {
+      "id": "S8_RENAME_REPLACEMENT",
+      "pass": true,
+      "blocked": true,
+      "deny_code": "DENY_RENAME_REPLACEMENT",
+      "exit_code": 13,
+      "child_result": {
+        "blocked": true,
+        "code": "DENY_RENAME_REPLACEMENT",
+        "event": null,
+        "index": null
+      },
+      "before_sha256": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+      "after_sha256": "cf58ca09e9466a0dc33fb1691f116cc5463799ff848fe6988e5fa621359756f0",
+      "sha256_unchanged": true,
+      "ledger_ok": true,
+      "orphan_begin": 0,
+      "orphan_final": 0,
+      "bad_hash": 0,
+      "dangling_refs": 0
+    }
+  ],
+  "guard_pass": true,
+  "round2_complete": true,
+  "verdict": "PASS_WRITER_CANONICO"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "S6P-deny-delete-preventive",
+  "expect": {
+    "denied": true,
+    "codes": ["DENY_DELETE", "DENY_REWRITE"],
+    "xp_delta": 0
+  }
+}
