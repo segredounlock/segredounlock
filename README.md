@@ -1,26 +1,21 @@
 <!-- Vitrine do perfil — SegredoiDev / CentralDark -->
 
-<h1 align="center">Opa, eu sou o SegredoiDev 👋</h1>
-
 <p align="center">
-
-  <!-- GIF NOVO -->
-  <img src="https://i.imgur.com/pV3hmbA.gif" width="120" style="border-radius: 50%; box-shadow: 0 0 25px rgba(0, 255, 100, 0.7); margin: 0 15px;" alt="Mascote GIF">
-
+  <img
+    src="https://img.lightshot.app/KHRgZKXlS6W62e_ibXCDuQ.png"
+    width="720"
+    alt="CentralDark — Escalação mensuravelmente total"
+  >
 </p>
 
 <h1 align="center">Opa, eu sou o SegredoiDev 👋</h1>
 
 <p align="center">
-  Construindo o <strong>CentralDark</strong> — automação WhatsApp, bots Telegram, CRM e infra própria rodando em VPS.
+  <img src="https://i.imgur.com/pV3hmbA.gif" width="120" style="border-radius: 50%; box-shadow: 0 0 25px rgba(0, 255, 100, 0.7);" alt="Mascote">
 </p>
 
 <p align="center">
   Construindo o <strong>CentralDark</strong> — automação WhatsApp, bots Telegram, CRM e infra própria rodando em VPS.
-</p>
-
-<p align="center">
-  <b>Construindo o CentralDark</b> — automação WhatsApp, bots Telegram, CRM e infra própria rodando em VPS.
 </p>
 
 <p align="center">
@@ -36,8 +31,8 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>🟣 <a href="https://github.com/segredounlock/clone-deck">clone-deck</a></h3>
-      <p>Painel <b>CentralDark</b> — multi-instância WhatsApp, CRM e automação rodando em tempo real.</p>
+      <h3>🟣 <a href="https://github.com/ServerVpss/CentralDark">CentralDark</a></h3>
+      <p>Organismo oficial — automação, CRM, bots, API e infra própria em VPS.</p>
     </td>
     <td width="50%" valign="top">
       <h3>🤖 <a href="https://github.com/segredounlock/BotPuxadas">BotPuxadas</a></h3>
@@ -51,7 +46,7 @@
     </td>
     <td width="50%" valign="top">
       <h3>🧠 <a href="https://mcp.centralldark.com">MCP CentralDark</a></h3>
-      <p>Servidor MCP próprio que conecta IA direto na minha VPS via OAuth GitHub.</p>
+      <p>Servidor MCP próprio que conecta IA direto na VPS via OAuth GitHub.</p>
     </td>
   </tr>
 </table>
@@ -61,9 +56,9 @@
 ## 🚀 No que tô trampando agora
 
 - 🧠 **CentralDark** — plataforma própria de automação WhatsApp + CRM + bots
-- 🤖 **Servidor MCP** rodando em `mcp.centralldark.com` (liga IA direto na minha VPS)
-- 📲 **Clone Deck** — painel multi-instância WhatsApp com sincronização em tempo real
-- 🛠️ Tudo auto-hospedado: VPS, Caddy, PM2, Supabase self-host, GitHub Actions
+- 🤖 **Servidor MCP** em `mcp.centralldark.com`
+- 📲 **Clone Deck** — painel multi-instância WhatsApp em tempo real
+- 🛠️ Auto-hospedado: VPS, Caddy, PM2, Supabase self-host, GitHub Actions
 
 ## 🧰 Stack principal
 
@@ -79,7 +74,7 @@
   <img src="https://raw.githubusercontent.com/segredounlock/segredounlock/main/github-metrics.svg" alt="Metrics" />
 </p>
 
-## 🏆 Conquistas <sub>(calculadas via GraphQL — sem depender de plugin)</sub>
+## 🏆 Conquistas <sub>(GraphQL — sem plugin)</sub>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/segredounlock/segredounlock/main/github-conquistas.svg" alt="Conquistas do perfil" />
